@@ -66,6 +66,7 @@ html {
 }
 
 #header {
+    height: 46px;
     background-color: #000;
     position: fixed;
     top: 0px;
@@ -74,9 +75,9 @@ html {
     height: 46px; 
     z-index: 1;
     /* z-index : GIúp header nổi lên trên  */
-    overflow: hidden;
+    
 }
-#header .mobile-menu-btn,
+
 #header .header-btn {
     float: right;
     padding: 0 21px;
@@ -88,16 +89,6 @@ html {
     cursor: pointer;
 }
 
-#header .mobile-menu-btn:hover {
-    background-color: #ccc;
-    
-}
-
-#header .mobile-menu-btn:hover .menu-icon {
-    color: #000;
-}
-
-#header .menu-icon,
 #header .search-icon {
     color: #fff;
     font-size: 18px;
@@ -108,11 +99,7 @@ html {
     display: inline-block;
 }
 
-#nav, .subnav {
-    /* Mất dánh dấu list */
-    list-style: none;
 
-}
 
 #nav > li {
     display: inline-block;
@@ -124,6 +111,7 @@ html {
     position: relative;
     color: #fff;
     text-transform: uppercase;
+    
 }
 
 #nav li a {
@@ -133,6 +121,12 @@ html {
     padding: 0 24px;
     display: block;
     
+}
+
+#nav, .subnav {
+    /* Mất dánh dấu list */
+    list-style: none;
+
 }
 
 #nav li:hover .subnav {
@@ -175,7 +169,7 @@ html {
     position: relative;
     margin-top: 46px;
     padding-top: 50%;
-    background: url('/assets/img/Imagine\ Dragons.jfif') top center / cover no-repeat;
+    background: url('/assets/img/Imagine Dragons.jfif') top center / cover no-repeat; 
 }
 
 #slider .text-content {
@@ -240,7 +234,11 @@ html {
     overflow: hidden;
 }
 
-
+#content .member-item {
+    float: left;
+    width: 33.33333%;
+    text-align: center;
+}
 
 #content .member-name {
     font-size: 15px;

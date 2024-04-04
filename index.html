@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Band</title>
     <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="stylesheet" href="./assets/icon/themify-icons-font/themify-icons/themify-icons.css">
 </head>
 <body>
@@ -19,7 +18,7 @@
                 <li><a href="#tour">Tour</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li>
-                    <a href="#">
+                    <a href="">
                         More
                         <i class="nav-arrow-down ti-angle-down"></i>
                     </a>
@@ -36,9 +35,7 @@
             <div class="header-btn">
                 <i class="search-icon ti-search"></i>
             </div>
-            <div id="mobile-menu" class="mobile-menu-btn">
-                <i class="menu-icon ti-menu"></i>
-            </div>
+            
             <!-- End: Search Button -->
         </div>
 
@@ -173,7 +170,7 @@
     </div>
 
     <div class="modal js-modal">
-        <div class="modal-container">
+        <div class="modal-container js-modal-container">
             <div class="modal-close js-modal-close">
                 <i class="ti-close"></i>
             </div>
@@ -212,6 +209,7 @@
     <script>
         const  buyBtns = document.querySelectorAll('.js-buy-ticket')
         const modal = document.querySelector('.js-modal')
+        const modelContainer = document.querySelector('.js-modal-container')
         const modalClose = document.querySelector('.js-modal-close')
         // Hàm hiện modal mua vé
         function showBuyTickets() {
@@ -229,17 +227,10 @@
         modalClose.addEventListener('click',hideBuyTickets)
         modal.addEventListener('click',hideBuyTickets)
 
-        var header =document.getElementById('header');
-        var mobileMenu =document.getElementById('mobile-menu');
-        var headerHeight = header.clientHeight;
-        mobileMenu.onclick = function() {
-            var isClosed = header.clientHeight === headerHeight;
-            if(isClosed) {
-                header.style.height = 'auto';
-            } else {
-                header.style.height = null;
-            }
-        }
+        modelContainer.addEventListener('click',function (event) {
+            event.stopPropagation();
+        })
+
     </script>
 </body>
 </html>
